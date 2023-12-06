@@ -38,7 +38,7 @@ public class ServerEventSenderTask implements Runnable {
                 if (verbose) platform.log(Level.INFO, "Sending " + runEvents.size() + " analytic events");
                 platform.getApiClient().sendEvents(runEvents).execute();
             } catch (IOException | BuyCraftAPIException e) {
-                platform.log(Level.SEVERE, "Failed to send analytic events!", e);
+                platform.log(Level.SEVERE, "Failed to send analytic events!");
                 return;
             }
 
